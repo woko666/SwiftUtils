@@ -42,6 +42,15 @@ public extension Array where Element:Equatable {
         return true
     }
     
+    func contains(_ other: [Element]) -> Bool {
+        for item in other {
+            if !contains(item) {
+                return false
+            }
+        }
+        return true
+    }
+    
     @discardableResult mutating func remove(element: Element) -> Bool {
         if let index = self.index(of: element) {
             self.remove(at: index)
