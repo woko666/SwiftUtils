@@ -128,7 +128,7 @@ public extension String {
     
     func trimWhitespaces() -> String
     {
-        return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
+        return self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
     }
     
     var length: Int {
