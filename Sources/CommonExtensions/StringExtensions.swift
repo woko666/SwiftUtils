@@ -126,9 +126,12 @@ public extension String {
         return digestData.map { String(format: "%02hhx", $0) }.joined()
     }*/
     
-    func trimWhitespaces() -> String
-    {
+    func trimWhitespaces() -> String {
         return self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+    }
+    
+    func notEmptyOrNil() -> String? {
+        return self.count > 0 ? self : nil
     }
     
     var length: Int {
