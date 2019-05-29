@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
-  s.name             = 'SwiftUtils'
-  s.version          = '0.0.1'
+  s.name             = 'SwiftUtilsGithub'
+  s.version          = '0.0.2'
   s.summary          = 'A collection of convenience utils and extensions that should have been in vanilla swift '
 
   s.license          = 'MIT'
@@ -14,3 +14,6 @@ Pod::Spec.new do |s|
   s.source_files  = ["Sources/**/*.swift"]
   s.library = 'iconv'
 end
+
+# pod lib lint
+# pod trunk push SwiftUtils.podspec
