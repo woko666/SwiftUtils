@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 public extension UIImage {
-    public func resizeImage(_ scale:Float) -> UIImage {
+    func resizeImage(_ scale:Float) -> UIImage {
         let size = self.size
         let newSize = CGSize(width: size.width * CGFloat(scale), height: size.height * CGFloat(scale))
         let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
@@ -15,7 +15,7 @@ public extension UIImage {
         return newImage!
     }
 
-    public func tint(_ color: UIColor) -> UIImage {
+    func tint(_ color: UIColor) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.size, false, UIScreen.main.scale)
         guard let context = UIGraphicsGetCurrentContext() else { return self }
         

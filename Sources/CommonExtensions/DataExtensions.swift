@@ -1,7 +1,7 @@
 import Foundation
 
 public extension Data {
-    public func appendTo(fileURL: URL) -> Bool {
+    func appendTo(fileURL: URL) -> Bool {
         do {
             if let fileHandle = try? FileHandle(forWritingTo: fileURL) {
                 defer {
@@ -19,12 +19,12 @@ public extension Data {
         }
     }
     
-    public init(arr:[UInt8]) {
+    init(arr:[UInt8]) {
         self.init()
         self.append(contentsOf: arr)
     }
     
-    public func append(fileURL: URL) throws {
+    func append(fileURL: URL) throws {
         if let fileHandle = FileHandle(forWritingAtPath: fileURL.path) {
             defer {
                 fileHandle.closeFile()
@@ -37,23 +37,19 @@ public extension Data {
         }
     }
     
-    public func toHex() -> String {
+    func toHex() -> String {
         return map { String(format: "%02hhX", $0) }.joined()
     }
     
-    public func toHex(from:Int, to:Int) -> String {
+    func toHex(from:Int, to:Int) -> String {
         return self.subdata(in: from..<to).toHex()
     }
     
-    public func toArrayUInt8() -> [UInt8] {
-        var array = [UInt8]()
-        self.withUnsafeBytes {  (pointer: UnsafePointer<UInt8>) in
-            array = Array(UnsafeBufferPointer(start: pointer, count: self.count))
-        }
-        return array
+    func toArrayUInt8() -> [UInt8] {
+        return [UInt8](self)        
     }
     
-    static public func fromArrayUInt8(_ arr:[UInt8]) -> Data {
+    static func fromArrayUInt8(_ arr:[UInt8]) -> Data {
         var data = Data()
         data.append(contentsOf: arr)
         return data
@@ -61,7 +57,7 @@ public extension Data {
 }
 
 public extension Int {
-    public func to(_ val:Int) -> [Int] {
+    func to(_ val:Int) -> [Int] {
         if val <= self {
             return []
         }

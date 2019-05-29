@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 public extension UIButton {
-    public var setColor:UIColor {
+    var setColor:UIColor {
         set {
             let origImage = self.image(for: .normal)
             let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)

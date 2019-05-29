@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8662804212031790024B379 /* IosUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8662802212031790024B379 /* IosUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8662804212031790024B379 /* SwiftUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8662802212031790024B379 /* SwiftUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8C4C65F229D7DA9004C2CC5 /* ThreadPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4C64A229D7DA9004C2CC5 /* ThreadPool.swift */; };
 		F8C4C660229D7DA9004C2CC5 /* ThreadsafeTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4C64B229D7DA9004C2CC5 /* ThreadsafeTimer.swift */; };
 		F8C4C661229D7DA9004C2CC5 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4C64C229D7DA9004C2CC5 /* Threading.swift */; };
@@ -30,8 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F86627FF212031790024B379 /* IosUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IosUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8662802212031790024B379 /* IosUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IosUtils.h; sourceTree = "<group>"; };
+		F86627FF212031790024B379 /* SwiftUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8662802212031790024B379 /* SwiftUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftUtils.h; sourceTree = "<group>"; };
 		F8662803212031790024B379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8C4C64A229D7DA9004C2CC5 /* ThreadPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadPool.swift; sourceTree = "<group>"; };
 		F8C4C64B229D7DA9004C2CC5 /* ThreadsafeTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsafeTimer.swift; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		F8662800212031790024B379 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F86627FF212031790024B379 /* IosUtils.framework */,
+				F86627FF212031790024B379 /* SwiftUtils.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 				F8C4C658229D7DA9004C2CC5 /* CommonExtensions */,
 				F8C4C649229D7DA9004C2CC5 /* Threading */,
 				F8C4C652229D7DA9004C2CC5 /* UIExtensions */,
-				F8662802212031790024B379 /* IosUtils.h */,
+				F8662802212031790024B379 /* SwiftUtils.h */,
 				F8662803212031790024B379 /* Info.plist */,
 			);
 			path = Sources;
@@ -140,16 +140,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8662804212031790024B379 /* IosUtils.h in Headers */,
+				F8662804212031790024B379 /* SwiftUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F86627FE212031790024B379 /* IosUtils */ = {
+		F86627FE212031790024B379 /* SwiftUtils */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8662807212031790024B379 /* Build configuration list for PBXNativeTarget "IosUtils" */;
+			buildConfigurationList = F8662807212031790024B379 /* Build configuration list for PBXNativeTarget "SwiftUtils" */;
 			buildPhases = (
 				F86627FA212031790024B379 /* Sources */,
 				F86627FB212031790024B379 /* Frameworks */,
@@ -160,9 +160,9 @@
 			);
 			dependencies = (
 			);
-			name = IosUtils;
+			name = SwiftUtils;
 			productName = IosUtils;
-			productReference = F86627FF212031790024B379 /* IosUtils.framework */;
+			productReference = F86627FF212031790024B379 /* SwiftUtils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +176,7 @@
 				TargetAttributes = {
 					F86627FE212031790024B379 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -192,7 +192,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F86627FE212031790024B379 /* IosUtils */,
+				F86627FE212031790024B379 /* SwiftUtils */,
 			);
 		};
 /* End PBXProject section */
@@ -380,7 +380,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -407,7 +407,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = info.woko.SwiftTypesExtensions;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -424,7 +424,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8662807212031790024B379 /* Build configuration list for PBXNativeTarget "IosUtils" */ = {
+		F8662807212031790024B379 /* Build configuration list for PBXNativeTarget "SwiftUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8662808212031790024B379 /* Debug */,

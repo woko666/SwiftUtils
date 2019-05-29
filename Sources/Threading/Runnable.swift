@@ -132,7 +132,7 @@ open class AbstractInterruptibleRunnable: InterruptibleRunnable {
     open func run() {
         do {
             try doWork()
-        } catch let _ as InterruptError {
+        } catch is InterruptError {
             // run was interrupted
         } catch {
             // shouldn't happen

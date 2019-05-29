@@ -7,24 +7,24 @@ public extension String
         return folding(options: .diacriticInsensitive, locale: .current)
     }
     
-    public var nfc:String {
+    var nfc:String {
         return (self as NSString).precomposedStringWithCanonicalMapping
     }
     
-    public var nfd:String {
+    var nfd:String {
         return (self as NSString).decomposedStringWithCanonicalMapping
     }
     
-    public var asciiEscaped:String {
+    var asciiEscaped:String {
         return self.unicodeScalars.map { $0.escaped(asASCII: true).replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: "") }.reduce("",+)
     }
     
-    public func isMatch(_ regex: String, options: NSRegularExpression.Options = .caseInsensitive) -> Bool
+    func isMatch(_ regex: String, options: NSRegularExpression.Options = .caseInsensitive) -> Bool
     {
         return getMatches(regex, options:options).count > 0
     }
     
-    public func getMatches(_ regex: String, options: NSRegularExpression.Options = .caseInsensitive) -> [String]
+    func getMatches(_ regex: String, options: NSRegularExpression.Options = .caseInsensitive) -> [String]
     {
         do {
             let regex = try NSRegularExpression(pattern: regex, options: options)
@@ -38,7 +38,7 @@ public extension String
         return []
     }
     
-    public func getCapturedGroups(_ pattern: String) -> [String] {
+    func getCapturedGroups(_ pattern: String) -> [String] {
         var results = [String]()
         
         var regex: NSRegularExpression
@@ -66,50 +66,50 @@ public extension String
 
 // data encoding
 public extension Character {
-    public var ascii: UInt32? {
+    var ascii: UInt32? {
         return String(self).unicodeScalars.filter{$0.isASCII}.first?.value
     }
 }
 
 public extension String {
     
-    public var urlEncodedQuery:String {
+    var urlEncodedQuery:String {
         get {
             return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? self
         }
     }
     
-    public var urlEncodedUser:String {
+    var urlEncodedUser:String {
         get {
             return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUserAllowed) ?? self
         }
     }
     
-    public var urlEncodedPassword:String {
+    var urlEncodedPassword:String {
         get {
             return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPasswordAllowed) ?? self
         }
     }
     
-    public var urlEncodedHost:String {
+    var urlEncodedHost:String {
         get {
             return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed) ?? self
         }
     }
     
-    public var urlEncodedPath:String {
+    var urlEncodedPath:String {
         get {
             return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPathAllowed) ?? self
         }
     }
     
-    public var urlEncodedStrong:String {
+    var urlEncodedStrong:String {
         get {
             return self.addingPercentEncoding(withAllowedCharacters: CharacterSet(charactersIn:"/")) ?? self
         }
     }
     
-    public var utf8Encoded: Data {
+    var utf8Encoded: Data {
         return data(using: .utf8)!
     }
     
@@ -178,7 +178,7 @@ public extension String {
                 let lengthOfFoundCharacter = self.index(startIndex, offsetBy: (substringLength + index))
                 let range = startOfFoundCharacter..<lengthOfFoundCharacter
                 
-                if self.substring(with: range) == substring {
+                if String(self[range]) == substring {
                     return index
                 }
             }

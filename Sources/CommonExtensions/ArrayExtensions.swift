@@ -52,7 +52,7 @@ public extension Array where Element:Equatable {
     }
     
     @discardableResult mutating func remove(element: Element) -> Bool {
-        if let index = self.index(of: element) {
+        if let index = self.firstIndex(of: element) {
             self.remove(at: index)
             return true
         }

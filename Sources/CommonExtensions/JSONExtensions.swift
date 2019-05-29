@@ -1,7 +1,7 @@
 import Foundation
 
 public extension JSONEncoder {
-    public static func encodeString<T: Encodable>(_ value: T, options opt: JSONSerialization.ReadingOptions = []) -> String {
+    static func encodeString<T: Encodable>(_ value: T, options opt: JSONSerialization.ReadingOptions = []) -> String {
         let data = try? JSONEncoder().encode(value)
         
         if let data = data {
@@ -12,11 +12,11 @@ public extension JSONEncoder {
 }
 
 public extension JSONDecoder {
-    public static func decodeData<T: Decodable>(_ type: T.Type, from:Data) -> T? {
+    static func decodeData<T: Decodable>(_ type: T.Type, from:Data) -> T? {
         return try? JSONDecoder().decode(type,from:from)
     }
     
-    public static func decodeString<T: Decodable>(_ type: T.Type, from:String) -> T? {
+    static func decodeString<T: Decodable>(_ type: T.Type, from:String) -> T? {
         return try? JSONDecoder().decode(type,from:from.utf8Encoded)
     }
 }
