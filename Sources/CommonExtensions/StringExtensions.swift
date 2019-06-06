@@ -189,6 +189,23 @@ public extension String {
         }
         return nil
     }
+    
+    func removeAll(characters: String) -> String {
+        return String(self.filter { !characters.contains($0) })
+    }
+    
+    func replaceAllRegex(pattern: String, with replacement: String) -> String {
+        return self.replacingOccurrences(of: pattern, with: replacement, options: .regularExpression, range: nil)
+    }
+    
+    func removeAllRepeated(characters: String) -> String {
+        var lastChar: Character?
+        return self.filter { char in
+            let shouldRemove = characters.contains(char) && lastChar == char
+            lastChar = char
+            return !shouldRemove
+        }
+    }
 }
 
 public extension String {
