@@ -147,7 +147,7 @@ public extension String {
     }
     
     func substring(toIndex: Int) -> String {
-        return self[0 ..< max(0, toIndex)]
+        return self[0 ..< min(toIndex, length)]
     }
     
     func substring(fromIndex: Int, length: Int) -> String {

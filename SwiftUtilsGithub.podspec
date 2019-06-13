@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftUtilsGithub'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'A collection of convenience utils and extensions that should have been in vanilla swift '
 
   s.license          = 'MIT'
@@ -16,4 +16,4 @@ Pod::Spec.new do |s|
 end
 
 # pod lib lint
-# pod trunk push SwiftUtils.podspec
+# pod trunk push SwiftUtilsGithub.podspec
