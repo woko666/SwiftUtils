@@ -56,8 +56,11 @@ public extension String
         
         for i in 0..<lastRangeIndex {
             let capturedGroupIndex = match.range(at: i)
-            let matchedString = (self as NSString).substring(with: capturedGroupIndex)
-            results.append(matchedString)
+            if capturedGroupIndex.location != NSNotFound && capturedGroupIndex.location + capturedGroupIndex.length <= self.length {
+                // the range is valid
+                let matchedString = (self as NSString).substring(with: capturedGroupIndex)
+                results.append(matchedString)
+            }
         }
         
         return results

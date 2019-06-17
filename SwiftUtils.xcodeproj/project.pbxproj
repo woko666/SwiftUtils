@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F8662804212031790024B379 /* SwiftUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8662802212031790024B379 /* SwiftUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F88F871322B7F61600FAE124 /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88F871222B7F61600FAE124 /* CGRectExtensions.swift */; };
 		F8C4C65F229D7DA9004C2CC5 /* ThreadPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4C64A229D7DA9004C2CC5 /* ThreadPool.swift */; };
 		F8C4C660229D7DA9004C2CC5 /* ThreadsafeTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4C64B229D7DA9004C2CC5 /* ThreadsafeTimer.swift */; };
 		F8C4C661229D7DA9004C2CC5 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4C64C229D7DA9004C2CC5 /* Threading.swift */; };
@@ -33,6 +34,7 @@
 		F86627FF212031790024B379 /* SwiftUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8662802212031790024B379 /* SwiftUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftUtils.h; sourceTree = "<group>"; };
 		F8662803212031790024B379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F88F871222B7F61600FAE124 /* CGRectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensions.swift; sourceTree = "<group>"; };
 		F8C4C64A229D7DA9004C2CC5 /* ThreadPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadPool.swift; sourceTree = "<group>"; };
 		F8C4C64B229D7DA9004C2CC5 /* ThreadsafeTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsafeTimer.swift; sourceTree = "<group>"; };
 		F8C4C64C229D7DA9004C2CC5 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		F86627F5212031790024B379 = {
 			isa = PBXGroup;
 			children = (
+				F88F871222B7F61600FAE124 /* CGRectExtensions.swift */,
 				F8662801212031790024B379 /* Sources */,
 				F8662800212031790024B379 /* Products */,
 			);
@@ -229,6 +232,7 @@
 				F8C4C663229D7DA9004C2CC5 /* WeakRef.swift in Sources */,
 				F8C4C66E229D7DA9004C2CC5 /* DataExtensions.swift in Sources */,
 				F8C4C66F229D7DA9004C2CC5 /* StringExtensions.swift in Sources */,
+				F88F871322B7F61600FAE124 /* CGRectExtensions.swift in Sources */,
 				F8C4C661229D7DA9004C2CC5 /* Threading.swift in Sources */,
 				F8C4C666229D7DA9004C2CC5 /* Runnable.swift in Sources */,
 			);
