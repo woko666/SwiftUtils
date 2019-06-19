@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftUtilsGithub'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'A collection of convenience utils and extensions that should have been in vanilla swift '
 
   s.license          = 'MIT'

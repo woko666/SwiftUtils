@@ -70,7 +70,6 @@
 		F86627F5212031790024B379 = {
 			isa = PBXGroup;
 			children = (
-				F88F871222B7F61600FAE124 /* CGRectExtensions.swift */,
 				F8662801212031790024B379 /* Sources */,
 				F8662800212031790024B379 /* Products */,
 			);
@@ -126,6 +125,7 @@
 		F8C4C658229D7DA9004C2CC5 /* CommonExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				F88F871222B7F61600FAE124 /* CGRectExtensions.swift */,
 				F8C4C659229D7DA9004C2CC5 /* ArrayExtensions.swift */,
 				F8C4C65A229D7DA9004C2CC5 /* DictionaryExtensions.swift */,
 				F8C4C65B229D7DA9004C2CC5 /* DataExtensions.swift */,
